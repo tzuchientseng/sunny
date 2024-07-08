@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>about</title>
+<!-- CSS Stylesheet (Important ones should be at the bottom) -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<!-- CSS樣式表(越重要放最下面) -->
+<link href='../css/introduction.css' rel='stylesheet'>
+<link href='../css/fullpage.css' rel='stylesheet'>
+<link rel="icon" href="image/favicon.ico">
+<!-- 按鈕樣式 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <a href="../about.html" @click="scrollToTop">
+            <img class="logo" src="../image/logo.svg" alt="Back to top!" style="width: 10%; height: auto;">
+        </a>
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Introduction</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../magic.html">Magic Show</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../music.html">Music Series</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../math.html">Math Kits</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                       <a class="nav-link dropdown-toggle" href="#" id="myCodeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                           My code
+                       </a>
+                       <ul class="dropdown-menu" aria-labelledby="myCodeDropdown">
+                           <li><a class="dropdown-item" href="essay.html">Essay Section</a></li>
+                           <li><a class="dropdown-item" href="myJavaAPI.html">My Java API</a></li>
+                           <li><a class="dropdown-item" href="pythonModule.html">My Python Module</a></li>
+                       </ul>
+                   </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../about.html">About Me</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="fullpage">
+        <div class="container" style="margin: 0px auto; text-align: center; width: 100%;">
+            <section class='slide' style="display: flex; justify-content: center; align-items: center; height: 100vh;" >
+                <div class="container">
+                        <div class="container" style="text-align: center;">
+                            <div class="intro-text bg-light p-4 rounded">
+                                <h1></h1><strong>我還在想我要寫甚麼...</strong></h1>
+                            </div>
+                        </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- sweetAlert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Activate RWD via JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="js/custom.js"></script>
+</body>
+</html>

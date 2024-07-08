@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>sunny</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Animated 3D Bar Chart with CSS3">
+    <meta name="keywords" content="css3, bar chart, animation, 3d">
+    <meta name="author" content="Sergey Lukin for Codrops">
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/graph.css">
+    <link rel="stylesheet" type="text/css" href="css/demo.css">
+    <link rel="stylesheet" type="text/css" href="../css/home.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,700' rel='stylesheet' type='text/css'>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="js/modernizr.custom.04022.js"></script>
+        <style>.ie-note-1{display:block;} .main{display:none;}</style>
+    <![endif]-->
+    <!--[if IE 9]><style>.ie-note-2{display:block;}</style><![endif]-->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-42933581-1', 'terry-c.com');
+        ga('send', 'pageview');
+    </script>
+</head>
+<body>
+    <a href="../about.html" @click="scrollToTop">
+        <img class="logo" src="../image/logo.svg" alt="Back to top!" style="width: 10%; height: auto;">
+    </a>
+    <header>
+        <h1>Skills and Resume</h1>
+        <h2 class="ie-note ie-note-1">Please view this in a modern browser.</h2>
+        <h2 class="ie-note ie-note-2">CSS3 Transitions don't work in Internet Explorer &lt; 10</h2>
+    </header>
+    <section class="main main2">
+        <img src="img/1.png"><span class="title">Education</span><br>
+        <img src="img/2.png"><span class="title">Employment History</span><br>
+        <img src="img/3.png"><span class="title">Entrepreneurship & Freelance Projects</span><br>
+
+    </section>
+    <section class="main">
+        <span class="button-label">Skill Type:</span>
+        <input type="radio" name="fill-graph" id="f-product1" checked="checked"><label for="f-product1">Server Side</label>
+        <input type="radio" name="fill-graph" id="f-product2"><label for="f-product2">Client Side</label>
+        <input type="radio" name="fill-graph" id="f-product3"><label for="f-product3">Others</label>
+        <ul class="graph-container">
+            <li>
+                <span class="sk1"></span>
+                <div class="bar-wrapper">
+                    <div class="bar-container">
+                        <div class="bar-background"></div>
+                        <div class="bar-inner">25</div>
+                        <div class="bar-foreground"></div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <span class="sk2"></span>
+                <div class="bar-wrapper">
+                    <div class="bar-container">
+                        <div class="bar-background"></div>
+                        <div class="bar-inner">50</div>
+                        <div class="bar-foreground"></div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <span class="sk3"></span>
+                <div class="bar-wrapper">
+                    <div class="bar-container">
+                        <div class="bar-background"></div>
+                        <div the "bar-inner">75</div>
+                        <div class="bar-foreground"></div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <span class="sk4"></span>
+                <div class="bar-wrapper">
+                    <div class="bar-container">
+                        <div class="bar-background"></div>
+                        <div class="bar-inner">100</div>
+                        <div class="bar-foreground"></div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <span class="sk5"></span>
+                <div class="bar-wrapper">
+                    <div class="bar-container">
+                        <div the "bar-background"></div>
+                        <div class="bar-inner">50</div>
+                        <div class="bar-foreground"></div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <span class="sk6"></span>
+                <div class="bar-wrapper">
+                    <div class="bar-container">
+                        <div the "bar-background"></div>
+                        <div class="bar-inner">40</div>
+                        <div class="bar-foreground"></div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <ul class="graph-marker-container">
+                    <li style="bottom:25%;"><span>I am still learning it</span></li>
+                    <li style="bottom:50%;"><span>Practical Skill</span></li>
+                    <li style="bottom:75%;"><span>Piece of cake</span></li>
+                    <li style="bottom:100%;"><span>Ninja</span></li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+</body>
+</html>

@@ -1,0 +1,112 @@
+@import url('normalize.css');
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+
+.main2 span.title:first-of-type, .main2 span.title{
+font-size: 3em;
+margin-left: 10px;
+}
+
+.main2 span.content:first-of-type, .main2 span.content{
+margin-left: 6em;
+color: black;
+}
+
+/* General Demo Style */
+body{
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+	background:#4CC4DF;
+	font-weight: 300;
+	font-size: 15px;
+	color: white;
+	overflow-y: scroll;
+}
+a{
+	color: #C9512C;
+	text-decoration: none;
+	border-bottom: 1px dashed #C9512C;
+}
+.container{
+	width: 100%;
+	position: relative;
+}
+.main{
+	text-align: center;
+	width: 100%;
+	background: rgba(0,0,0,0.03);
+	padding: 30px 50px 105px 50px;
+	/*margin: 0 auto 30px auto;
+	box-shadow: inset 0 0 4px rgba(0,0,0,0.2);*/
+	border-top-style:dashed;
+}
+
+.main2{
+text-align: left;
+padding-bottom: 30px;
+}
+
+.clr{
+	clear: both;
+	padding: 0;
+	height: 0;
+	margin: 0;
+}
+.container > header{
+	margin: 10px;
+	padding: 0px 10px 0px 10px;
+	position: relative;
+	display: block;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+    text-align: center;
+}
+.container > header h1{
+	font-size: 36px;
+	line-height: 40px;
+	margin: 0;
+	position: relative;
+	font-weight: 300;
+	color: white;
+	padding: 5px 0px;
+	/*text-shadow: 1px 1px 1px rgba(255,255,255,0.7);*/
+}
+.container > header h1 span{
+	font-weight: 700;
+}
+.container > header p{
+	font-style: italic;
+	color: #aaa;
+	text-shadow: 1px 1px 1px rgba(255,255,255,0.7);
+}
+/* Header Style */
+.codrops-top{
+	line-height: 24px;
+	font-size: 11px;
+	background: #fff;
+	background: rgba(255, 255, 255, 0.6);
+	text-transform: uppercase;
+	z-index: 9999;
+	position: relative;
+	font-family: Cambria, Georgia, serif;
+	box-shadow: 1px 0px 2px rgba(0,0,0,0.2);
+}
+.codrops-top a{
+	padding: 0px 10px;
+	letter-spacing: 1px;
+	color: #333;
+	display: inline-block;
+}
+.codrops-top a:hover{
+	background: rgba(255,255,255,0.9);
+}
+.codrops-top span.right{
+	float: right;
+}
+.codrops-top span.right a{
+	float: left;
+	display: block;
+}
+.ie-note{
+	color: #ac375d;
+	display: none;
+	font-size: 15px;
+}

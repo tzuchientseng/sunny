@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Terry - Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="css/mywebsite.css" rel="stylesheet">
+    
+    <!-- Grids -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,700' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" type="text/css" href="css/default.css" />
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <script type="text/javascript" src="js/modernizr.custom.js"></script>
+    
+    <!-- Grids -->
+    <link rel="stylesheet" type="text/css" href="../css/home.css" />
+    
+    <script>
+        (function(i,s,o,g,r,a,m){
+            i['GoogleAnalyticsObject']=r;
+            i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)
+            },
+            i[r].l=1*new Date();
+            a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];
+            a.async=1;
+            a.src=g;
+            m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-42933581-1', 'terry-c.com');
+        ga('send', 'pageview');
+    </script>
+</head>
+<body>
+    <a href="../about.html" @click="scrollToTop">
+        <img class="logo" src="../image/logo.svg" alt="Back to top!" style="width: 10%; height: auto;">
+    </a>
+
+    <header class="clearfix">
+        <div class="heading">
+            <img class="clip" src="images/clip.png" />
+            Some interesting projects.
+        </div>
+    </header>
+
+    <div class="container">    
+        <div class="main">
+            <ul id="og-grid" class="og-grid">
+                <li>
+                    <a href="http://www.storyline.terry-c.com/" data-largesrc="images/SL_bg.jpg" data-title="Story Line" data-description="Story Line is an online story sharing and collaborating web application, Currently Under Production <br /><strong>Role: </strong>Co-founder<br /><strong>Technologies:</strong> Laravel(php MVC), Sql, CSS & twitter bootstrap, JS">
+                        <img src="images/thumbs/SL.jpg" alt="img03"/>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://jacksoncity.ca" data-largesrc="images/JC_bg.jpg" data-title="Jackson City" data-description="Jackson City is a local sports bar <br /> <strong>Role: </strong>Contract Developer <br />Developed a Joomla based website including designing and customizing existing modules and user interface. <br /> <strong>Technologies:</strong><strong>Technologies: </strong>Joomla(php&MySQL), JavaScrip&jQuery, Photoshop, HTML, CSS" >
+                        <img src="images/thumbs/JC.jpg" alt="img01"/>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://cubicwork.com" data-largesrc="images/CW_bg.jpg" data-title="Cubic Work" data-description="Cubic Work is a 3D printing technology company that aims to develop a 3D objects online trading platform.<br /><strong>Role: </strong>Co-founder<br /> As a Director of Technology of Cubic Work, the online platform was published and developed in Joomla. <br /><strong>Technologies: </strong>Joomla(php&MySQL), JavaScrip&jQuery, Photoshop, HTML, CSS" >
+                        <img src="images/thumbs/CW.jpg" alt="img02"/>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://www.urbancountrydecor.com/" data-largesrc="images/UCD_bg.jpg" data-title="Urban Country Decor" data-description="Urban Country Decor is an on-line shop<br /><strong>Role: </strong>Contract Developer and Consultant</strong><br />Customized Joomla theme and modules; Fixed many bugs left over from company's previous developers; Consulted on improving user experience and web performances <br /><strong>Technologies: </strong>php, Javascrip(jQuery), MySQL">
+                        <img src="images/thumbs/UCD.jpg" alt="img03"/>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-largesrc="images/QEL_bg.jpg" data-title="Quick Equity Loans" data-description="Quick Equity Loans is a mortgage company <br /><strong>Role: </strong>Contract Developer<br /> Developed submit forms using Ajax for better user experience <br /> Customized and Designed company's banners and landing page using jQuery and CSS <br /><strong>Technologies: </strong>CSS, HTML, jQuery, Ajax, Photoshop">
+                        <img src="images/thumbs/QEL.jpg" alt="img01"/>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://imperialrestaurant.ca" data-largesrc="images/IR_bg.jpg" data-title="Imperial Restaurant" data-description="Imperial Restaurant is a local Chinese and Tai restaurant. <br /><strong>Role: </strong>Contract Developer<br />The owner likes to stay 'old-fashioned' in terms of design and user interface <br /><strong>Technologies: </strong>Joomla, HTML, CSS, jQuery">
+                        <img src="images/thumbs/IR.jpg" alt="img01"/>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-largesrc="images/RT_bg.jpg" data-title="ReasonTek" data-description="<strong>Role: </strong>Contract Developer<br />Developed server-side email function for customers to contact the company <br /><strong>Technologies: </strong>php, HTML">
+                        <img src="images/thumbs/RT.jpg" alt="img02"/>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://barkavenuebycucciolini.ca/" data-largesrc="images/BA_bg.jpg" data-title="Bark Avenue" data-description="<strong>Role: </strong>Contract Developer<br />Developing an online petshop for a customer <br /><strong>Technologies: </strong>Joomla, php, jQuery, CSS, PhotoShop">
+                        <img src="images/thumbs/BA.jpg" alt="img02"/>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div><!-- /container -->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="js/grid.js"></script>
+    <script>
+        $(function() {
+            Grid.init();
+        });
+    </script>
+</body>
+</html>
+

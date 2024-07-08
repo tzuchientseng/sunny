@@ -7,8 +7,8 @@
 <!-- CSS Stylesheet (Important ones should be at the bottom) -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 <!-- CSS樣式表(越重要放最下面) -->
-<!-- <link href='css/fullpage.css' rel='stylesheet'> -->
 <link href='css/introduction.css' rel='stylesheet'>
+<link href='css/fullpage.css' rel='stylesheet'>
 <link rel="icon" href="image/favicon.ico">
 <!-- 按鈕樣式 -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11">
@@ -28,16 +28,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="index.html">Introduction</a>
                     </li>
-                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="myCodeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            My code
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="myCodeDropdown">
-                            <li><a class="dropdown-item" href="essay.html">Essay Section</a></li>
-                            <li><a class="dropdown-item" href="myJavaAPI.html">My Java API</a></li>
-                            <li><a class="dropdown-item" href="pythonModule.html">My Python Module</a></li>
-                        </ul>
-                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="magic.html">Magic Show</a>
                     </li>
@@ -47,21 +37,31 @@
                     <li class="nav-item">
                         <a class="nav-link" href="math.html">Math Kits</a>
                     </li>
+                    <li class="nav-item dropdown">
+                       <a class="nav-link dropdown-toggle" href="#" id="myCodeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                           My code
+                       </a>
+                       <ul class="dropdown-menu" aria-labelledby="myCodeDropdown">
+                           <li><a class="dropdown-item" href="essay.html">Essay Section</a></li>
+                           <li><a class="dropdown-item" href="myJavaAPI.html">My Java API</a></li>
+                           <li><a class="dropdown-item" href="pythonModule.html">My Python Module</a></li>
+                       </ul>
+                   </li>
                     <li class="nav-item">
-                        <a class="nav-link" href=".html">About Me</a>
+                        <a class="nav-link" href="about.html">About Me</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <div class="container" style="margin: 0px auto; text-align: center; width: 100%;">
-        <div id="fullpage">
-            <section class='slide' id='slide1'>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class='upper text-center' height: 10vh;>
+    <div id="fullpage">
+        <div class="container" style="margin: 0px auto; text-align: center; width: 100%;">
+        <section class='slide' id='slide1'>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class='upper text-center' height: 10vh;>
                                 <h2><strong style="color: rgb(207, 153, 53);">曾子謙</strong></h2>
                                 <h6 style="color: rgb(80, 65, 38);">Sunny Tseng</h6>
                             </div>
@@ -90,23 +90,20 @@
                     <div class="row">
                         <div class="col-md-12" style="text-align: center; opacity: 0.7;">
                             <div class="intro-text bg-light p-4 rounded">
+                                <h2 class="pt-1"><strong>Introduction</strong></h2>
+                                <p>Magic show: 魔術手法教學檔案庫</p>
+                                <p>Music series: 自己喜歡的音樂</p>
+                                <p>Math Kits: 數學工具(隨機數產生器...)</p>
+                                <p>My code: 裏頭分享自己所寫的程式</p>
+                                <p style="color:rgb(107, 107, 86);font-size: 70%;">->厄... 應該沒有人會用陌生人的程式碼八~</p>
+                                <hr>
                                 <div class="intro-text bg-light p-4 rounded">
-                                    <h2 class="mb-4"><strong>Profiles</strong></h2>
+                                    <h2 class="pb-1">Profiles</h2>
                                     <p>Faith: Christian</p>
-                                    <p>Education:</p>
-                                    <p>國立台中教育大學-數學教育學系</p>
                                     <div style="text-align: center;">
                                     <img src="image/textQRcode.jpg" alt="Link QRcode" width="100" height="100">
                                     </div>
                                 </div>
-                                <p></p>
-                                <hr>
-                                <h2 class="mb-4">Introduction</h2>
-                                <p>My code: 裏頭分享自己所寫的程式</p>
-                                <p>Magic show: 魔術手法教學檔案庫</p>
-                                <p>Music series: 自己喜歡的音樂</p>
-                                <p>Math Kits: 數學工具(隨機數產生器...)</p>
-                                <p></p>
                             </div>
                         </div>
                     </div>
@@ -137,7 +134,6 @@
         <div style="display: flex; justify-content: center; align-items: center; height: 10vh;">
             <iframe src="https://lottie.host/embed/bf9d83b5-c8b1-4c65-8ecb-a3dce721d154/7mH8zosmQ7.json"></iframe>
         </div>
-        <!-- Vue -->
     </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script>
