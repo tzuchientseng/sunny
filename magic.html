@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Magic</title>
+<!-- CSS Stylesheet (Important ones should be at the bottom) -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<!-- CSS樣式表(越重要放最下面) -->
+<link href='css/fullpage.css' rel='stylesheet'>
+<link href='css/magicCustom.css' rel='stylesheet'>
+<!-- 引入SweetAlert2的CSS文件 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <a href="index.html">
+            <img class="logo" src="image/logo.svg" alt="Back to top!" style="width: 10%; height: auto;">
+        </a>
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Introduction</a>
+                </li>
+                    <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="myCodeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        My code
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="myCodeDropdown">
+                        <li><a class="dropdown-item" href="essay.html">Essay Section</a></li>
+                        <li><a class="dropdown-item" href="myJavaAPI.html">My Java API</a></li>
+                        <li><a class="dropdown-item" href="pythonModule.html">My Python Module</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="magic.html">Magic Show</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="music.html">Music Series</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="math.html">Math Kits</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href=".html">About Me</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div>
+    <section class='slide' id='slide1'>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class='upper text-center'>
+                        <h4>Magic Show With Friend</h4>
+                        <div>
+                            <iframe width="300" height="270" src="https://www.youtube.com/embed/_r2u0WnKSz0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <br>
+                    </div>
+                    <div class="lower text-center">
+                        <div>
+                            <a class='btn2' href='https://www.youtube.com/@user-cm2ik8hb4g' target="_blank" rel="noopener">More video</a>
+                        </div>
+                        <div>
+                            <a class='arrow' href=''>
+                                <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M23.245 4l-11.245 14.374-11.219-14.374-.781.619 12 15.381 12-15.391-.755-.609z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class='slide' id='slide2'>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class='upper text-center'>
+                        <h2>Introduction</h2>
+                        <br>
+                        <br>
+                    </div>
+                    <div class="text-center">
+                        <div>
+                            <div class="intro">
+                                <p style="color: rgb(225, 227, 231);">本網站將不定期更新魔術教學影片。這邊會展示一些比較困難的手法教學影片~</p>
+                                <p style="color: rgb(225, 227, 231);">我的本意並非要破解魔術，而是對有興趣學習魔術的人教學與傳承。 </p>
+                             <p style="color: rgb(225, 227, 231);"> 哈! 最後感謝神賜給我一雙靈巧的手可以變魔術! </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container"  id="app1">
+        <div class="row">
+            <div class="col-md-12">
+                <div class='upper text-center'>
+                    <h2>Demostration</h2> 
+                </div>
+                <div class="text-center">
+                        <div>
+                            <div class="text-box">
+                                <p>01_Raise Rise</p>
+                                <div>
+                                    <iframe width="300" height="315" src="https://www.youtube.com/embed/J_6aKCXxHL0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                                <button type="button" class="btn btn-info" @click="showPasswordPrompt">Tutoiral 01</button>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="display: flex; justify-content: center; align-items: center; height: 10vh;">
+        <iframe src="https://lottie.host/embed/84abc4be-1cca-4db2-980c-e796b1943206/OqXlE73zWi.json"></iframe>
+    </div>
+    <div class="container" id="app2">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="text-center">
+                        <div>
+                            <div class="text-box">
+                                <p>02_Ambitious Card Routine</p>
+                                <div>
+                                    <iframe width="300" height="315" src="https://www.youtube.com/embed/oQOVsZ4yysg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                                <button type="button" class="btn btn-info" @click="showPasswordPrompt">Tutoiral 02</button>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class='slide' id='slide3'>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <section class='slide' id='slide4'>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class='upper text-center'>
+                        <div clsas="" id="video-container">
+                            <video id="video" autoplay muted loop>
+                                <source src="image/bg1.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <div style="display: flex; justify-content: center; align-items: center; height: 10vh;">
+        <iframe src="https://lottie.host/embed/97d7dcb7-aef5-4dbc-bf05-cbf09ec1513e/ag7XoGv4Rn.json"></iframe>
+    </div>
+</div>
+
+    <!-- jQuery CDN -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+    <!-- Activate RWD via JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.2.7/dist/vue.global.prod.js"></script>
+    <!-- 引入SweetAlert2的JS文件 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+    <script src="js/magic.js"></script>
+</body>
+</html>
