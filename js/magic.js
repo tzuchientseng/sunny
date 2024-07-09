@@ -9,16 +9,21 @@ const app1 = Vue.createApp({
                 },
                 showCancelButton: true,
                 confirmButtonText: 'Submit',
+                confirmButtonColor: '#ff9800',  // 橘色確認按鈕
+                cancelButtonColor: '#aaa',  // 灰色取消按鈕
                 showLoaderOnConfirm: true,
                 preConfirm: (code) => {
                     return new Promise((resolve, reject) => {
                         setTimeout(() => {
                             if (code === '51') { 
-                                resolve()
+                                resolve();
                             } else {
                                 Swal.fire({
                                     icon: 'error',
-                                    text: 'Invalid code! Try again'
+                                    title: 'Invalid code!',
+                                    text: 'Try again',
+                                    confirmButtonColor: '#3085d6', // 設置為藍色
+                                    confirmButtonText: 'OK'
                                 });
                             }
                         }, 200)
@@ -32,7 +37,7 @@ const app1 = Vue.createApp({
             })
         }
     }
-});
+}).mount('#app1');
 
 const app2 = Vue.createApp({
     methods: {
@@ -45,16 +50,21 @@ const app2 = Vue.createApp({
                 },
                 showCancelButton: true,
                 confirmButtonText: 'Submit',
+                confirmButtonColor: '#ff9800',  // 橘色確認按鈕
+                cancelButtonColor: '#aaa',  // 灰色取消按鈕
                 showLoaderOnConfirm: true,
                 preConfirm: (code) => {
                     return new Promise((resolve, reject) => {
                         setTimeout(() => {
                             if (code === '39') { 
-                                resolve()
+                                resolve();
                             } else {
                                 Swal.fire({
                                     icon: 'error',
-                                    text: 'Invalid code! Try again'
+                                    title: 'Invalid code!',
+                                    text: 'Try again',
+                                    confirmButtonColor: '#3085d6', // 設置為藍色
+                                    confirmButtonText: 'OK'
                                 });
                             }
                         }, 200)
@@ -68,7 +78,4 @@ const app2 = Vue.createApp({
             })
         }
     }
-});
-
-app1.mount('#app1');
-app2.mount('#app2');
+}).mount('#app2');
