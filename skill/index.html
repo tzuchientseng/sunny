@@ -2,18 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>sunny</title>
+    <meta http-equiv="X-Compatible" content="IE=edge,chrome=1">
+    <title>Sunny</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Animated 3D Bar Chart with CSS3">
     <meta name="keywords" content="css3, bar chart, animation, 3d">
     <meta name="author" content="Sergey Lukin for Codrops">
     <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/graph.css">
     <link rel="stylesheet" type="text/css" href="css/demo.css">
     <link rel="stylesheet" type="text/css" href="../css/home.css">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,700' rel='stylesheet' type='text/css'>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     <script src="js/script.js"></script>
     <!--[if lt IE 9]>
         <script type="text/javascript" src="js/modernizr.custom.04022.js"></script>
@@ -31,24 +32,115 @@
 </head>
 <body>
     <a href="../about.html" @click="scrollToTop">
-        <img class="logo" src="../image/logo.svg" alt="Back to top!" style="width: 10%; height: auto;">
+        <img class="logo" src="../image/logo.svg" alt="Back to top!" class="img-fluid" style="width: 10%; height: auto;">
     </a>
-    <header>
+    <header class="text-center my-4">
         <h1>Skills and Resume</h1>
         <h2 class="ie-note ie-note-1">Please view this in a modern browser.</h2>
         <h2 class="ie-note ie-note-2">CSS3 Transitions don't work in Internet Explorer &lt; 10</h2>
     </header>
-    <section class="main main2">
-        <img src="img/1.png"><span class="title">Education</span><br>
-        <img src="img/2.png"><span class="title">Employment History</span><br>
-        <img src="img/3.png"><span class="title">Entrepreneurship & Freelance Projects</span><br>
 
+    <section class="container my-4">
+        <div class="row">
+            <div class="col-12 col-md-4 text-center">
+                <img src="img/1.png" alt="Education" class="img-fluid mb-3">
+                <h3>Education</h3>
+                <p>National Taichung University of Education - Mathematics Education<br>(國立台中教育大學-數學教育學系)</p>
+            </div>
+            <div class="col-12 col-md-4 text-center">
+                <img src="img/2.png" alt="Employment History" class="img-fluid mb-3">
+                <h3>Employment History</h3>
+                <p>當兵(義務役)— 步槍兵/資通電軍 (4 months)<br>
+                December 2023 - March 2024<br>
+                完成義務役</p>
+                <p>桀壽司日本料理, 台中市南屯區公益路二段653號 — 外場正職 (5 months)<br>
+                June 2023 - October 2023<br>
+                學習點餐操作, 客戶結帳, 客人服務</p>
+                <p>雲雀-義式古拉爵, 台中南屯區文心路一段521號1樓 — 工讀生(1.5 months)<br>
+                June 2023 - September 2023<br>
+                學習環境打掃, 客人服務</p>
+            </div>
+            <div class="col-12 col-md-4 text-center">
+                <img src="img/3.png" alt="Entrepreneurship & Freelance Projects" class="img-fluid mb-3">
+                <h3>Entrepreneurship & Freelance Projects</h3>
+                <p>Project Name — Detail<br>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+            </div>
+        </div>
     </section>
+
+    <section class="container my-4">
+        <h2 class="text-center">個人資料</h2>
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 text-center">
+                <p>Sunny Tseng (曾子謙)</p>
+                <p>National Taichung University of Education - Mathematics Education (國立台中教育大學-數學教育學系)</p>
+                <h3>聯繫方式：</h3>
+                <p>LINE ID: kingmask5207</p>
+                <p>Email: tzuchientseng@gmail.com</p>
+                <p>Phone: (886)-0933117508</p>
+                <p>LINKEDIN | GITHUB | BLOG</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container my-4">
+        <h2 class="text-center">工作經歷</h2>
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8">
+                <p>當兵(義務役) — 步槍兵/資通電軍 (4 months)<br>
+                December 2023 - March 2024<br>
+                完成義務役</p>
+                <p>桀壽司日本料理, 台中市南屯區公益路二段653號 — 外場正職 (5 months)<br>
+                June 2023 - October 2023<br>
+                學習點餐操作, 客戶結帳, 客人服務</p>
+                <p>雲雀-義式古拉爵, 台中南屯區文心路一段521號1樓 — 工讀生(1.5 months)<br>
+                June 2023 - September 2023<br>
+                學習環境打掃, 客人服務</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container my-4">
+        <h2 class="text-center">項目與興趣</h2>
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8">
+                <p>Project Name — Detail<br>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container my-4">
+        <h2 class="text-center">大學經歷</h2>
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8">
+                <p>教會活動— Dcamp工讀(暑期短打工小朋友活動與課程)</p>
+                <p>營隊經驗-大學活動(小數苗課程組 跳舞給小朋友看與數學設計課程)</p>
+                <p>社團經驗-魔術社教學長->魔術社團顧問</p>
+                <p>修教育學程(未參加完實習階段)(只有修必修課程)</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container my-4">
+        <h2 class="text-center">證書</h2>
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8">
+                <p>— On process—</p>
+            </div>
+        </div>
+    </section>
+
+
+
     <section class="main">
         <span class="button-label">Skill Type:</span>
+        <hr>
         <input type="radio" name="fill-graph" id="f-product1" checked="checked"><label for="f-product1">Server Side</label>
         <input type="radio" name="fill-graph" id="f-product2"><label for="f-product2">Client Side</label>
         <input type="radio" name="fill-graph" id="f-product3"><label for="f-product3">Others</label>
+        <hr>
         <ul class="graph-container">
             <li>
                 <span class="sk1"></span>
@@ -75,7 +167,7 @@
                 <div class="bar-wrapper">
                     <div class="bar-container">
                         <div class="bar-background"></div>
-                        <div the "bar-inner">75</div>
+                        <div class="bar-inner">75</div>
                         <div class="bar-foreground"></div>
                     </div>
                 </div>
@@ -94,7 +186,7 @@
                 <span class="sk5"></span>
                 <div class="bar-wrapper">
                     <div class="bar-container">
-                        <div the "bar-background"></div>
+                        <div class="bar-background"></div>
                         <div class="bar-inner">50</div>
                         <div class="bar-foreground"></div>
                     </div>
@@ -104,7 +196,7 @@
                 <span class="sk6"></span>
                 <div class="bar-wrapper">
                     <div class="bar-container">
-                        <div the "bar-background"></div>
+                        <div class="bar-background"></div>
                         <div class="bar-inner">40</div>
                         <div class="bar-foreground"></div>
                     </div>
@@ -120,5 +212,7 @@
             </li>
         </ul>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
 </html>
+
