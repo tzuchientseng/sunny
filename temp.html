@@ -1,24 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-tw">
 <head>
-    <title>about</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Google Fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:301,700' rel='stylesheet' type='text/css'>
-    
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <!-- 其他CSS文件 -->
-    <link rel="stylesheet" type="text/css" href="css/aboutMe/demo.css" />
-    <link rel="stylesheet" type="text/css" href="css/aboutMe/common.css" />
-    <link rel="stylesheet" type="text/css" href="css/aboutMe/style3.css" />
-    <link rel="icon" href="image/favicon.ico">
-    <link href='css/introduction.css' rel='stylesheet'>
-    <!-- 按鈕樣式 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11">
-    <script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sunny</title>
+    <!-- CSS Stylesheet -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link href='css/introduction.css' rel='stylesheet'>
     <link rel="icon" href="image/favicon.ico">
@@ -49,15 +35,15 @@
                         <a class="nav-link" href="math.html">Math Kits</a>
                     </li>
                     <li class="nav-item dropdown">
-                       <a class="nav-link dropdown-toggle" href="#" id="myCodeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                           My code
-                       </a>
-                       <ul class="dropdown-menu" aria-labelledby="myCodeDropdown">
-                           <li><a class="dropdown-item" href="essay.html">Essay Section</a></li>
-                           <li><a class="dropdown-item" href="myJavaAPI.html">My Java API</a></li>
-                           <li><a class="dropdown-item" href="pythonModule.html">My Python Module</a></li>
-                       </ul>
-                   </li>
+                        <a class="nav-link dropdown-toggle" href="#" id="myCodeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            My code
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="myCodeDropdown">
+                            <li><a class="dropdown-item" href="essay.html">Essay Section</a></li>
+                            <li><a class="dropdown-item" href="myJavaAPI.html">My Java API</a></li>
+                            <li><a class="dropdown-item" href="pythonModule.html">My Python Module</a></li>
+                        </ul>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">About Me</a>
                     </li>
@@ -65,52 +51,31 @@
             </div>
         </div>
     </nav>
-    <div class="mainbox">
-        <br>
-    </div>
+
     <div id="app">
         <ul class="ch-grid">
             <li>
                 <div class="ch-item">
                     <div class="ch-info">
-                        <h3>portfolio</h3>
+                        <h3>About Me</h3>
                         <p><a href="about/index.html">view</a></p>
                     </div>
                     <div class="ch-thumb ch-img-1"></div>
                 </div>
             </li>
-            <!-- <li>
-                <div class="ch-item">
-                    <div class="ch-info">
-                        <h3>Portfolio</h3>
-                        <p><a href="portfolio">Enter</a></p>
-                    </div>
-                    <div class="ch-thumb ch-img-2"></div>
-                </div>
-            </li> -->
             <li>
                 <div class="ch-item">
-                    <div class="ch-info">
+                    <div class="ch-info ">
                         <h3>Resume & Skills</h3>
                         <p><a @click="showPasswordPrompt">enter</a></p>
                     </div>
                     <div class="ch-thumb ch-img-3"></div>
                 </div>
             </li>
-            <!-- <li>
-                <div class="ch-item">
-                    <div class="ch-info">
-                        <h3>Contact Me</h3>
-                        <p><a href="contact">Enter</a></p>
-                    </div>
-                    <div class="ch-thumb ch-img-4"></div>
-                </div>
-            </li> -->
             <li>
                 <div class="ch-item">
                     <div class="ch-info">
                         <h3>Contact Me</h3>
-                        <!-- <p><a href="#" id="showInfo" @click="toggleInfo">info</a></p> -->
                         <p><a id="showInfo" @click="toggleInfo">info</a></p>
                     </div>
                     <div class="ch-thumb ch-img-4"></div>
@@ -118,15 +83,12 @@
             </li>
         </ul>
         <section class="container my-4" v-show="showInfoSection" style="color: rgb(141, 135, 135);">
-            <hr>
-            <h2 class="text-center"><strong>Personal Info</strong></h2>
+            <h2 class="text-center">個人資料:</h2>
             <div class="row justify-content-center">
                 <div class="col-12 col-md-8 text-center">
                     <p>Sunny Tseng (曾子謙)</p>
-                    <p>Faith: Christian</p>
                     <p>National Taichung University of Education - Mathematics Education (國立台中教育大學-數學教育學系)</p>
-                    <hr>
-                    <h3><strong>Contact Information</strong></h3>
+                    <h3>聯繫方式:</h3>
                     <a href="https://line.me/ti/p/d9qdqMvPM7" target="_blank" rel="noopener" style="text-decoration: underline; color: rgb(131, 175, 64)">LINE ID: kingmask5207</a>
                     <br>
                     <a href="mailto:tzuchientseng@gmail.com" target="_blank" rel="noopener" style="text-decoration: underline; color: rgb(233, 135, 8);">Email: tzuchientseng@gmail.com</a>
@@ -136,8 +98,8 @@
                     <a href="https://github.com/tzuchientseng" target="_blank" rel="noopener" style="text-decoration: underline; color: black;">GITHUB</a>
                     </p>
                     <p>Phone: (886)-0933117508</p>
+
                 </div>
-                <hr>
             </div>
         </section>
     </div>
@@ -146,22 +108,70 @@
         <img src="image/pictQRcode.jpg" alt="Link QRcode" width="100" height="100">
     </div>
 
-    <!-- Vue3 -->
-    <script src="https://cdn.jsdelivr.net/npm/vue@3.2.7/dist/vue.global.prod.js"></script>
-    <script src="js/password.js"></script>
-
-    <!-- jQuery -->
+    <!-- jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Bootstrap JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <!-- Vue3 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.2.7/dist/vue.global.prod.js"></script>
+    <!-- sweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <!-- 其他JavaScript文件 -->
     <script src="js/bootstrap.min.js"></script>
-    <!-- sweetAlert-->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script> -->
-    <!-- 其他jJavaScript文件 -->
-    <!-- <script src="js/bootstrap.min.js"></script> -->
-
+    <!-- JavaScript功能 -->
+    <script src="js/password.js"></script>
+    
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    showInfoSection: false
+                };
+            },
+            methods: {
+                toggleInfo() {
+                    this.showInfoSection = !this.showInfoSection;
+                },
+                showPasswordPrompt() {
+                    Swal.fire({
+                        title: 'Authentication',
+                        input: 'password',
+                        inputAttributes: {
+                            autocapitalize: 'off'
+                        },
+                        showCancelButton: true,
+                        confirmButtonText: 'Submit',
+                        confirmButtonColor: '#ff9800',  // 橘色確認按鈕
+                        cancelButtonColor: '#aaa',  // 灰色取消按鈕
+                        showLoaderOnConfirm: true,
+                        preConfirm: (code) => {
+                            return new Promise((resolve, reject) => {
+                                setTimeout(() => {
+                                    if (code === 'pass') { 
+                                        resolve();
+                                    } else {
+                                        Swal.fire({
+                                            icon: 'error',
+                                            title: 'Invalid code!',
+                                            text: 'Try again',
+                                            confirmButtonColor: '#3085d6',
+                                            confirmButtonText: 'OK'
+                                        });
+                                    }
+                                }, 200)
+                            })
+                        },
+                        allowOutsideClick: () => !Swal.isLoading()
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            window.location.href = 'skill/index.html';   
+                        }
+                    })
+                }
+            }
+        }).mount('#app');
+    </script>
 </body>
 </html>
 

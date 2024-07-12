@@ -1,5 +1,13 @@
-const app = Vue.createApp({
+ const app = Vue.createApp({
+    data() {
+        return {
+            showInfoSection: false
+        };
+    },
     methods: {
+        toggleInfo() {
+            this.showInfoSection = !this.showInfoSection;
+        },
         showPasswordPrompt() {
             Swal.fire({
                 title: 'Authentication',
