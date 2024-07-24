@@ -30,61 +30,53 @@
         ga('send', 'pageview');
     </script>
 </head>
+
 <body>
-    <a href="../about.html" @click="scrollToTop">
-        <img class="logo" src="../image/logo.svg" alt="Back to top!" class="img-fluid" style="width: 10%; height: auto;">
-    </a>
+<div class="container" style="margin: 0px auto; text-align: center; width: 100%;">
     <header class="text-center my-4">
+
         <h1>Skills and Resume</h1>
         <h2 class="ie-note ie-note-1">Please view this in a modern browser.</h2>
         <h2 class="ie-note ie-note-2">CSS3 Transitions don't work in Internet Explorer &lt; 10</h2>
     </header>
 
     <section class="container my-4">
-        <h2 class="pb-1">Profiles</h2>
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-8">
-                <p>Project Name — Detail<br>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-            </div>
-        </div>
-    </section>
+        <!-- <h2 class="pb-1">Profiles</h2> -->
+        <h2 class="pb-1">簡介</h2>
+            <div class="row justify-content-center">
+                <hr>
+                <div class="col-12 col-md-4 text-center">
+                    <img src="img/1.png" alt="Education" class="img-fluid mb-3">
+                    <h3>Education</h3>
+                    <p>National Taichung University of Education - Mathematics Education<br>(國立台中教育大學-數學教育學系)</p>
+                </div>
+                <hr>
+                <div class="col-12 col-md-4 text-center">
+                    <img src="img/2.png" alt="Employment History" class="img-fluid mb-3">
+                    <h3>Employment History</h3>
+                    <p>當兵(義務役)— 步槍兵/資通電軍 (4 months)<br>
+                    December 2023 - March 2024<br>
+                    完成義務役</p>
+                    <p>桀壽司日本料理, 台中市南屯區公益路二段653號 — 外場正職 (5 months)<br>
+                    June 2023 - October 2023<br>
+                    學習點餐操作, 客戶結帳, 客人服務</p>
+                    <p>雲雀-義式古拉爵, 台中南屯區文心路一段521號1樓 — 工讀生(1.5 months)<br>
+                    June 2023 - September 2023<br>
+                    學習環境打掃, 客人服務</p>
+                </div>
+                <hr>
 
-    <section class="container my-4">
-        <div class="row">
-            <div class="col-12 col-md-4 text-center">
-                <img src="img/1.png" alt="Education" class="img-fluid mb-3">
-                <h3>Education</h3>
-                <p>National Taichung University of Education - Mathematics Education<br>(國立台中教育大學-數學教育學系)</p>
-            </div>
-            <div class="col-12 col-md-4 text-center">
-                <img src="img/2.png" alt="Employment History" class="img-fluid mb-3">
-                <h3>Employment History</h3>
-                <p>當兵(義務役)— 步槍兵/資通電軍 (4 months)<br>
-                December 2023 - March 2024<br>
-                完成義務役</p>
-                <p>桀壽司日本料理, 台中市南屯區公益路二段653號 — 外場正職 (5 months)<br>
-                June 2023 - October 2023<br>
-                學習點餐操作, 客戶結帳, 客人服務</p>
-                <p>雲雀-義式古拉爵, 台中南屯區文心路一段521號1樓 — 工讀生(1.5 months)<br>
-                June 2023 - September 2023<br>
-                學習環境打掃, 客人服務</p>
-            </div>
-            <div class="col-12 col-md-4 text-center">
-                <img src="img/2.png" alt="Entrepreneurship & Freelance Projects" class="img-fluid mb-3">
-                <h3>Entrepreneurship & Freelance Projects</h3>
-                <p>Project Name — Detail<br>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-            </div>
         </div>
     </section>
 
     <section class="container my-4">
         <h2 class="text-center">項目與興趣</h2>
         <div class="row justify-content-center">
-            <div class="col-12 col-md-8">
+            <div class="col-12 col-md-4 text-center">
+                <img src="img/2.png" alt="Entrepreneurship & Freelance Projects" class="img-fluid mb-3">
+                <h3>Side Projects</h3>
                 <p>Project Name — Detail<br>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                ...........................</p>
             </div>
         </div>
     </section>
@@ -105,7 +97,7 @@
         <h2 class="text-center">證書</h2>
         <div class="row justify-content-center">
             <div class="col-12 col-md-8">
-                <p>— On process—</p>
+                <p>— TQC+ 基礎程式語言-專業級(Python 3) —</p>
             </div>
         </div>
     </section>
@@ -113,7 +105,8 @@
 
 
     <section class="main">
-        <span class="button-label">Skill Type:</span>
+        <!-- <h2 class="text-center">Skill typle</h2> -->
+        <h2 class="text-center">技能圖</h2>
         <hr>
         <input type="radio" name="fill-graph" id="f-product1" checked="checked"><label for="f-product1">Server Side</label>
         <input type="radio" name="fill-graph" id="f-product2"><label for="f-product2">Client Side</label>
@@ -190,7 +183,11 @@
             </li>
         </ul>
     </section>
+    <a href="../about.html" @click="scrollToTop">
+        <img class="logo" src="../image/logo.svg" alt="Back to top!" class="img-fluid" style="width: 7%; height: auto;">
+    </a>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</div>
 </body>
 </html>
 

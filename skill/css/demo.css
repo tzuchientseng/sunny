@@ -1,5 +1,12 @@
 @import url('normalize.css');
-@import url('https://fonts.googleapis.com/css?family=Gotham:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+
+:root {
+  --primary-color: #d3941f;
+  --secondary-color: #2c3e50;
+  --background-color: #ecf0f1;
+  --text-color: #34495e;
+}
 
 /* Reset some basic elements */
 body, h1, h2, h3, h4, h5, h6, p, span, a {
@@ -8,94 +15,109 @@ body, h1, h2, h3, h4, h5, h6, p, span, a {
     border: 0;
 }
 
-/* Font Faces */
-@font-face {
-    font-family: 'Gotham Medium';
-    src: url('fonts/Gotham-Medium.woff2') format('woff2'),
-         url('fonts/Gotham-Medium.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Gotham Book';
-    src: url('fonts/Gotham-Book.woff2') format('woff2'),
-         url('fonts/Gotham-Book.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-}
-
-/* Body and Container Setup */
 body {
-    font-family: 'Gotham Book', sans-serif;
-    background: #967a51;
-    color: white;
-    font-size: 15px;
-    overflow-y: scroll;
+  font-family: 'Open Sans', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  font-size: 15px;
+  overflow-y: scroll;
 }
 
 .container {
-    width: 100%;
-    position: relative;
-    padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
 }
 
-/* Main Section Styles */
+.container > header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 2rem 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin: 10px 20px;
+  text-align: center;
+}
+
+.container h1, .container h2, .container h3 {
+  color: var(--secondary-color);
+}
+
+.container .logo {
+  transition: transform 0.3s ease;
+}
+
+.container .logo:hover {
+  transform: scale(1.1);
+}
+
+.container section {
+  background-color: white;
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.container .img-fluid {
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.container .img-fluid:hover {
+  transform: translateY(-5px);
+}
+
+.container .graph-container {
+  background-color: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
 .main, .main2 {
-    text-align: center;
-    background: rgba(0,0,0,0.03);
-    padding: 30px 50px;
-    border-top: 1px dashed white;
+  text-align: center;
+  background: rgba(0,0,0,0.03);
+  padding: 30px 50px;
+  border-top: 1px dashed white;
 }
 
 .main2 {
-    text-align: left;
+  text-align: left;
 }
 
-/* Header and Navigation Styles */
-.container > header {
-    margin: 10px 20px;
-    padding: 10px;
-    text-align: center;
-    background: rgba(255, 255, 255, 0.6);
-    box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+a {
+  color: #C9512C;
+  text-decoration: none;
 }
 
 .codrops-top {
-    background: #fff;
-    text-transform: uppercase;
-    line-height: 24px;
-    font-size: 11px;
-    position: relative;
-    box-shadow: 1px 0px 2px rgba(0,0,0,0.2);
+  background: #fff;
+  text-transform: uppercase;
+  line-height: 24px;
+  font-size: 11px;
+  position: relative;
+  box-shadow: 1px 0px 2px rgba(0,0,0,0.2);
 }
 
 .codrops-top a {
-    padding: 0px 10px;
-    color: #333;
-    text-decoration: none;
+  padding: 0px 10px;
+  color: #333;
+  text-decoration: none;
 }
 
 .codrops-top a:hover {
-    background: rgba(255,255,255,0.9);
+  background: rgba(255,255,255,0.9);
 }
 
-/* Links and Buttons */
-a {
-    color: #C9512C;
-    text-decoration: none;
-    border-bottom: 1px dashed #C9512C;
-}
-
-/* Responsive and Accessibility Enhancements */
-@media only screen and (max-width: 990px) {
-    .container, .main, .main2 {
-        padding: 15px;
-        text-align: center;
-    }
-}
-
-/* Additional Classes for Functionalities */
 .ie-note {
-    display: none; /* Hide elements not needed or deprecated */
+  display: none;
+}
+
+@media only screen and (max-width: 990px) {
+  .container, .main, .main2 {
+    padding: 15px;
+    text-align: center;
+  }
 }
