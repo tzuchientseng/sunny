@@ -17,7 +17,10 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <a href="index.html" @click="scrollToTop">
-            <img class="logo" src="image/logo.svg" alt="Back to top!" style="width: 10%; height: auto;">
+            <img class="logo" src="image/logo.svg" alt="Back to top!" 
+            style="width: 7%; height: auto; transition: transform 0.3s ease; transform: scale(1.1);"
+            onmouseover="this.style.transform='scale(1.2)'" 
+            onmouseout="this.style.transform='scale(1.1)'">
         </a>
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
