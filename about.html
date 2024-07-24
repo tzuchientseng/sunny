@@ -33,7 +33,6 @@
             onmouseover="this.style.transform='scale(1.2)'" 
             onmouseout="this.style.transform='scale(1.1)'">
         </a>
-
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -54,12 +53,10 @@
                     </li>
                     <li class="nav-item dropdown">
                        <a class="nav-link dropdown-toggle" href="#" id="myCodeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                           My code
+                           My Essay
                        </a>
                        <ul class="dropdown-menu" aria-labelledby="myCodeDropdown">
-                           <li><a class="dropdown-item" href="essay.html">Essay Section</a></li>
-                           <li><a class="dropdown-item" href="myJavaAPI.html">My Java API</a></li>
-                           <li><a class="dropdown-item" href="pythonModule.html">My Python Module</a></li>
+                           <li><a class="dropdown-item" href="essay/stock.html">stock analysis</a></li>
                        </ul>
                    </li>
                     <li class="nav-item">
@@ -77,12 +74,31 @@
             <li>
                 <div class="ch-item">
                     <div class="ch-info">
-                        <h3>portfolio</h3>
-                        <p><a href="about/index.html">view</a></p>
+                        <h3>My code</h3>
+                        <p><a href="#" @click.prevent="showButtons">view</a></p>
                     </div>
                     <div class="ch-thumb ch-img-1"></div>
                 </div>
             </li>
+            <div v-if="isButtonsVisible" class="d-flex justify-content-center mt-4">
+                <button class="btn btn-secondary mx-2" @click="navigateTo('myJavaAPI.html')">My Java</button>
+                <button class="btn btn-secondary mx-2" @click="navigateTo('pythonModule.html')">My Python</button>
+            </div>
+                        <!-- <div v-if="isButtonsVisible">
+                            <button @click="navigateTo('myJavaAPI.html')">Java API</button>
+                            <button @click="navigateTo('pythonModule.html')">Python Module</button>
+                        </div> -->
+
+            <li>
+                <div class="ch-item">
+                    <div class="ch-info">
+                        <h3>Resume & Skills</h3>
+                        <p><a @click="showPasswordPrompt">enter</a></p>
+                    </div>
+                    <div class="ch-thumb ch-img-3"></div>
+                </div>
+            </li>
+
             <!-- <li>
                 <div class="ch-item">
                     <div class="ch-info">
@@ -92,13 +108,15 @@
                     <div class="ch-thumb ch-img-2"></div>
                 </div>
             </li> -->
+
             <li>
                 <div class="ch-item">
                     <div class="ch-info">
-                        <h3>Resume & Skills</h3>
-                        <p><a @click="showPasswordPrompt">enter</a></p>
+                        <h3>Contact Me</h3>
+                        <!-- <p><a href="#" id="showInfo" @click="toggleInfo">info</a></p> -->
+                        <p><a id="showInfo" @click="toggleInfo">info</a></p>
                     </div>
-                    <div class="ch-thumb ch-img-3"></div>
+                    <div class="ch-thumb ch-img-4"></div>
                 </div>
             </li>
             <!-- <li>
@@ -110,17 +128,9 @@
                     <div class="ch-thumb ch-img-4"></div>
                 </div>
             </li> -->
-            <li>
-                <div class="ch-item">
-                    <div class="ch-info">
-                        <h3>Contact Me</h3>
-                        <!-- <p><a href="#" id="showInfo" @click="toggleInfo">info</a></p> -->
-                        <p><a id="showInfo" @click="toggleInfo">info</a></p>
-                    </div>
-                    <div class="ch-thumb ch-img-4"></div>
-                </div>
-            </li>
         </ul>
+
+
         <section class="container my-4" v-show="showInfoSection" style="color: rgb(141, 135, 135);">
             <hr>
             <h2 class="text-center"><strong>Personal Info</strong></h2>

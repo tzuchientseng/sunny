@@ -1,7 +1,8 @@
- const app = Vue.createApp({
+const app = Vue.createApp({
     data() {
         return {
-            showInfoSection: false
+            showInfoSection: false,
+            isButtonsVisible: false
         };
     },
     methods: {
@@ -11,7 +12,6 @@
         showPasswordPrompt() {
             Swal.fire({
                 title: 'Authentication',
-                // input: 'text',
                 input: 'password',
                 inputAttributes: {
                     autocapitalize: 'off'
@@ -44,6 +44,12 @@
                     window.location.href = 'skill/index.html';   
                 }
             })
+        },
+        showButtons() {
+            this.isButtonsVisible = !this.isButtonsVisible;
+        },
+        navigateTo(url) {
+            window.location.href = url;
         }
     }
 }).mount('#app');
