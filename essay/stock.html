@@ -1,117 +1,7 @@
-<!DOCTYPE html>
-<html lang="zh-tw">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Stock</title>
-<!-- CSS Stylesheet (Important ones should be at the bottom) -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-<!-- CSS樣式表(越重要放最下面) -->
-<link rel="icon" href="image/favicon.ico">
-<link href='css/stock.css' rel='stylesheet'>
-<!-- 按鈕樣式 -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11">
-</head>
-
-
-
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-        <a href="../index.html" @click="scrollToTop">
-            <img class="logo" src="../image/logo.svg" alt="Back to top!" 
-            style="width: 7%; height: auto; transition: transform 0.3s ease; transform: scale(1.1);"
-            onmouseover="this.style.transform='scale(1.2)'" 
-            onmouseout="this.style.transform='scale(1.1)'">
-        </a>
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html">Introduction</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../magic.html">Magic Show</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../music.html">Music Series</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../math.html">Math Kits</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                       <a class="nav-link dropdown-toggle" href="#" id="myCodeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                           My Portfolio
-                       </a>
-                       <ul class="dropdown-menu" aria-labelledby="myCodeDropdown">
-                           <li><a class="dropdown-item" href="nba.html">NBA G.O.A.T. Candidates</a></li>
-                           <li><a class="dropdown-item" href="stock.html">Stocks Analysis</a></li>
-                       </ul>
-                   </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../about.html">About Me</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    
-    <section class='slide' id='slide1'>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class='upper text-center'>
-                    <h2 style="color: rgb(131, 131, 89);">The stocks</h2>
-                    </div>
-                    <div class="upper text-center">
-                        <div>
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-12" style="opacity: 0.8;">
-                                        <div class="intro-text bg-light p-4 rounded">
-                                            <p>同樣是科技股究竟股票漲幅相關性是否顯著?</p>
-                                            <h5 class="mb-4">NVIDIA(英偉達)</h5>
-                                            <h5 class="mb-4">versus</h5>
-                                            <h5 class="mb-4">QUANTA(廣達)</h5>
-                                            <p>透過Python爬蟲技術載入.CSV檔，再對於兩股價平均數進行統計數據分析</p>
-                                            <h6 style="text-align: right; color: darkgray;">2024/6月份股票分析</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a class='arrow' href=''>
-                                <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M23.245 4l-11.245 14.374-11.219-14.374-.781.619 12 15.381 12-15.391-.755-.609z"/></svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12" style="text-align: center">
-                    <div class="intro-text bg-light p-4 rounded">
-                        <div style="display: flex; justify-content: center; align-items: center; height: 10vh;">
-                            <iframe src="https://lottie.host/embed/d3395d13-9c43-4850-a24f-648d9d019300/KXCMw3n8k8.json"></iframe>
-                        </div>
-                        <h2 class="mt-2 mb-3">Step1: 爬蟲爬起來!</h2>
-                        <img src="image/stock.png" alt="Python image" style="width: 100%; height: auto; margin: 3px;" >
-                        <a href="https://hk.investing.com/equities/nvidia-corp-historical-data" target="_blank" rel="noopener" class="btn btn-dark">NVIDIA</a>
-                        <a href="https://stock.wearn.com/cdata.asp?Year=113&month=06&kind=2382" target="_blank" rel="noopener" class="btn btn-dark">QUANTA</a>
-                        <div style="display: flex; justify-content: center; align-items: center; height: 17vh;">
-                            <iframe src="https://lottie.host/embed/84abc4be-1cca-4db2-980c-e796b1943206/OqXlE73zWi.json"></iframe>
-                        </div>
-                        <h2 class="mt-2 mb-2">Step2:對表格做爬蟲</h2>
-                        <img src="image/scrape.png" alt="Java API image" style="width: 100%; height: auto;">
-                        <pre id="pythonCommand">
+<!doctypehtml><html lang=zh-tw><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><title>Stock</title><link href=https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css rel=stylesheet crossorigin=anonymous integrity=sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9><link href=image/favicon.ico rel=icon><link href=css/stock.css rel=stylesheet><link href=https://cdn.jsdelivr.net/npm/sweetalert2@11 rel=stylesheet><nav class="fixed-top navbar navbar-expand-lg navbar-light"><a href=../index.html @click=scrollToTop><img alt="Back to top!"src=../image/logo.svg style="width:7%;height:auto;transition:transform .3s ease;transform:scale(1.1)"class=logo onmouseout='this.style.transform="scale(1.1)"'onmouseover='this.style.transform="scale(1.2)"'></a><div class=container-fluid><button aria-controls=navbarNav aria-expanded=false aria-label="Toggle navigation"class=navbar-toggler data-bs-target=#navbarNav data-bs-toggle=collapse type=button><span class=navbar-toggler-icon></span></button><div class="collapse navbar-collapse"id=navbarNav><ul class="mx-auto navbar-nav"><li class=nav-item><a href=../index.html class=nav-link>Introduction</a><li class=nav-item><a href=../magic.html class=nav-link>Magic Show</a><li class=nav-item><a href=../music.html class=nav-link>Music Series</a><li class=nav-item><a href=../math.html class=nav-link>Math Kits</a><li class="nav-item dropdown"><a href=# class="nav-link dropdown-toggle"aria-expanded=false data-bs-toggle=dropdown id=myCodeDropdown role=button>My Portfolio</a><ul class=dropdown-menu aria-labelledby=myCodeDropdown><li><a href=nba.html class=dropdown-item>NBA G.O.A.T. Candidates</a><li><a href=stock.html class=dropdown-item>Stocks Analysis</a></ul><li class=nav-item><a href=../about.html class=nav-link>About Me</a></ul></div></div></nav><section class=slide id=slide1><div class=container><div class=row><div class=col-md-12><div class="text-center upper"><h2 style=color:#838359>The stocks</h2></div><div class="text-center upper"><div><div class=container><div class=row><div class=col-md-12 style=opacity:.8><div class="bg-light intro-text p-4 rounded"><p>同樣是科技股究竟股票漲幅相關性是否顯著?<h5 class=mb-4>NVIDIA(英偉達)</h5><h5 class=mb-4>versus</h5><h5 class=mb-4>QUANTA(廣達)</h5><p>透過Python爬蟲技術載入.CSV檔，再對於兩股價平均數進行統計數據分析<h6 style=text-align:right;color:#a9a9a9>2024/6月份股票分析</h6></div></div></div></div><a href=""class=arrow><svg clip-rule=evenodd fill-rule=evenodd height=24 width=24 xmlns=http://www.w3.org/2000/svg><path d="M23.245 4l-11.245 14.374-11.219-14.374-.781.619 12 15.381 12-15.391-.755-.609z"/></svg></a></div></div></div></div></div></section><section><div class=container><div class=row><div class=col-md-12 style=text-align:center><div class="bg-light intro-text p-4 rounded"><div style=display:flex;justify-content:center;align-items:center;height:10vh><iframe src=https://lottie.host/embed/d3395d13-9c43-4850-a24f-648d9d019300/KXCMw3n8k8.json></iframe></div><h2 class="mt-2 mb-3">Step1: 爬蟲爬起來!</h2><img alt="Python image"src=image/stock.png style=width:100%;height:auto;margin:3px> <a href=https://hk.investing.com/equities/nvidia-corp-historical-data class="btn btn-dark"rel=noopener target=_blank>NVIDIA</a> <a href="https://stock.wearn.com/cdata.asp?Year=113&month=06&kind=2382"class="btn btn-dark"rel=noopener target=_blank>QUANTA</a><div style=display:flex;justify-content:center;align-items:center;height:17vh><iframe src=https://lottie.host/embed/84abc4be-1cca-4db2-980c-e796b1943206/OqXlE73zWi.json></iframe></div><h2 class="mb-2 mt-2">Step2:對表格做爬蟲</h2><img alt="Java API image"src=image/scrape.png style=width:100%;height:auto><pre id=pythonCommand>
 """
 需要修改的部分：
-<目標 URL>:你要爬取的網頁的URL。
+<目標 url>:你要爬取的網頁的URL。
 <表格選擇器>:選擇表格元素的CSS選擇器。
 <標籤>和<類別>:表格行的標籤和類別。
 <列標籤>:表格列的標籤。
@@ -143,7 +33,7 @@ service = Service(ChromeDriverManager().install())
 driver = webdriver.Chrome(service=service, options=options)
 
 # 請求目標 URL
-url = '<目標 URL>'
+url = '<目標 url>'
 driver.get(url)
 
 # 等待頁面加載並抓取內容
@@ -208,70 +98,7 @@ print(f"數據已保存到 {filename}")
 driver.quit()
 
 
-                        </pre>
-                        <button onclick="copyCode('pythonCommand')">爬蟲程式碼模板copy</button>
-                        <div class="mt-4" style="display: flex; justify-content: center; align-items: center; height: 10vh;">
-                            <iframe src="https://lottie.host/embed/84abc4be-1cca-4db2-980c-e796b1943206/OqXlE73zWi.json"></iframe>
-                        </div>
-                        <h2 class="mt-1 mb-2">Step3: 各模組統計分析</h2>
-                        <img src="image/statistics.png" alt="Java API image" style="width: 100%; height: auto; margin: 3px;">
-                        <div style="display: flex; justify-content: center; align-items: center; height: 10vh;">
-                            <iframe src="https://lottie.host/embed/d3395d13-9c43-4850-a24f-648d9d019300/KXCMw3n8k8.json"></iframe>
-                        </div>
-                            <div class="col-md-12" style="opacity: 0.8;">
-                                <div class="intro-text bg-light p-4 rounded">
-                                    <hr>
-                                    <h2 class="mb-4">NVIDIA(英偉達)</h2>
-                                    <h2 class="mb-4">versus</h2>
-                                    <h2 class="mb-4">QUANTA(廣達)</h2>
-                                    <hr>
-                                    <p>
-                                        <strong>結論</strong><br>
-                                        對於 NVIDIA 和 QUANTA 的平均股價進行了統計分析，並獲得了以下結果：
-                                    </p>
-                                    <ul>
-                                        <li>NVIDIA 六月份的平均股價之 95% 信賴區間為 [101.56, 112.34]。</li>
-                                        <li>QUANTA 六月份的平均股價之 95% 信賴區間為 [278.80, 284.30]。</li>
-                                    </ul>
-                                        <img src="image/chart.png" alt="Java API image" style="width: 100%; height: auto; margin: 3px;">
-                                    <p>
-                                        進一步檢驗了 NVIDIA 和 QUANTA 之間的平均股價是否存在顯著差異。檢驗結果如下：
-                                    </p>
-                                    <ul>
-                                        <li>虛無(零)假設 (H0):μ1 = μ2</li>
-                                        <li>對立假設 (H1)：μ1 ≠ μ2</li>
-                                        <li>T 統計量：-60.2361</li>
-                                        <li>P 值：0.0000</li>
-                                        <li>在α = 0.05下拒絕虛無假設</li>
-                                    </ul>
-                                    <p>
-                                        這意味著我們有足夠的證據認為 NVIDIA 和 QUANTA 的平均股價存在顯著差異。
-                                    </p>
-                                    <p>
-                                        <strong>總結</strong><br>
-                                        通過這次分析，我們發現 NVIDIA 和 QUANTA 的平均股價在統計上有顯著不同。股價漲動因素複雜，人性、環境、景氣...等諸多因素影響，兩公司之間並不會顯著關聯。
-                                    </p>
-                                </div>
-                            </div>
-                    </div>
-                </div>
-                <iframe src="https://lottie.host/embed/e1ad340e-3f5e-43ee-9956-6c546a8b8af5/HTnRYwUAIx.json"></iframe>
-            </div>
-        </div>
-    </section>
-
-    <!-- Vue -->
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <!-- sweetAlert-->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <!-- jQuery CDN -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <!-- Activate RWD via JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-    <script src="js/custom.js"></script>
-    
-    <script>
-        function copyCode(elementId) {
+                        </pre><button onclick='copyCode("pythonCommand")'>爬蟲程式碼模板copy</button><div class=mt-4 style=display:flex;justify-content:center;align-items:center;height:10vh><iframe src=https://lottie.host/embed/84abc4be-1cca-4db2-980c-e796b1943206/OqXlE73zWi.json></iframe></div><h2 class="mb-2 mt-1">Step3: 各模組統計分析</h2><img alt="Java API image"src=image/statistics.png style=width:100%;height:auto;margin:3px><div style=display:flex;justify-content:center;align-items:center;height:10vh><iframe src=https://lottie.host/embed/d3395d13-9c43-4850-a24f-648d9d019300/KXCMw3n8k8.json></iframe></div><div class=col-md-12 style=opacity:.8><div class="bg-light intro-text p-4 rounded"><hr><h2 class=mb-4>NVIDIA(英偉達)</h2><h2 class=mb-4>versus</h2><h2 class=mb-4>QUANTA(廣達)</h2><hr><p><strong>結論</strong><br>對於 NVIDIA 和 QUANTA 的平均股價進行了統計分析，並獲得了以下結果：<ul><li>NVIDIA 六月份的平均股價之 95% 信賴區間為 [101.56, 112.34]。<li>QUANTA 六月份的平均股價之 95% 信賴區間為 [278.80, 284.30]。</ul><img alt="Java API image"src=image/chart.png style=width:100%;height:auto;margin:3px><p>進一步檢驗了 NVIDIA 和 QUANTA 之間的平均股價是否存在顯著差異。檢驗結果如下：<ul><li>虛無(零)假設 (H0):μ1 = μ2<li>對立假設 (H1)：μ1 ≠ μ2<li>T 統計量：-60.2361<li>P 值：0.0000<li>在α = 0.05下拒絕虛無假設</ul><p>這意味著我們有足夠的證據認為 NVIDIA 和 QUANTA 的平均股價存在顯著差異。<p><strong>總結</strong><br>通過這次分析，我們發現 NVIDIA 和 QUANTA 的平均股價在統計上有顯著不同。股價漲動因素複雜，人性、環境、景氣...等諸多因素影響，兩公司之間並不會顯著關聯。</div></div></div></div><iframe src=https://lottie.host/embed/e1ad340e-3f5e-43ee-9956-6c546a8b8af5/HTnRYwUAIx.json></iframe></div></div></section><script src=https://unpkg.com/vue@3/dist/vue.global.js></script><script src=https://cdn.jsdelivr.net/npm/sweetalert2@11></script><script src=https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js></script><script src=https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js crossorigin=anonymous integrity=sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm></script><script src=js/custom.js></script><script>function copyCode(elementId) {
             const codeBlock = document.getElementById(elementId);
             const range = document.createRange();
             window.getSelection().removeAllRanges(); // 清除當前選擇
@@ -285,9 +112,4 @@ driver.quit()
                 icon: 'success',
                 confirmButtonText: 'Close'
             });
-        }
-    </script>
-    
-</body>
-</html>
-
+        }</script>
