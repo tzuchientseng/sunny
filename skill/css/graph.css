@@ -11,7 +11,7 @@ div.long{
     width: 104%; /* play with this one if you change perspective depth */
     text-align: center;
 	font-weight: 300;
-	color: white;
+	color: rgb(97, 7, 7);
 }
 
 
@@ -90,7 +90,7 @@ div.long{
     width: 81%; /* play with this one if you change perspective depth */
     text-align: center;
 	font-weight: 300;
-	color: white;
+	color: rgb(71, 7, 7);
     font-size: 1.5em;
 }
 

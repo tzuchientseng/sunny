@@ -10,7 +10,7 @@ $(document).ready(function(){
 				$('span.sk3').html("C++");
 				$('span.sk4').html("JS");
 				$('span.sk5').html("PHP");
-				$('span.sk6').html("DataBase (SQL)");}
+				$('span.sk6').html("DataBase (mySQL)");}
 			//else
 				//$('#car').removeClass('selected')
 
