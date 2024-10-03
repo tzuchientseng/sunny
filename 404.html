@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Redirect</title>
+    <script>
+        // JavaScript redirection code
+        if (window.location.pathname.startsWith('/api')) {
+            // Get the original requested path and replace /api with an empty string
+            const apiPath = window.location.pathname.replace('/api', '');
+            // Redirect to Heroku's API
+            window.location.href = 'https://my-api-project-83a1e4f4e00f.herokuapp.com' + apiPath;
+        }
+    </script>
+</head>
+<body></body>
+</html>

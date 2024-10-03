@@ -1,0 +1,200 @@
+@import url('normalize.css');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+
+:root {
+  --primary-color: #d3941f;
+  --secondary-color: #2c3e50;
+  --background-color: #ecf0f1;
+  --text-color: #34495e;
+}
+
+/* Reset some basic elements */
+body, h1, h2, h3, h4, h5, h6, p, span, a {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  font-size: 15px;
+  overflow-y: scroll;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+}
+
+.container > header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 2rem 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin: 10px 20px;
+  text-align: center;
+}
+
+.container h1, .container h2, .container h3 {
+  color: var(--secondary-color);
+}
+
+.container .logo {
+  transition: transform 0.3s ease;
+}
+
+.container .logo:hover {
+  transform: scale(1.1);
+}
+
+.container section {
+  background-color: white;
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.container .img-fluid {
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.container .img-fluid:hover {
+  transform: translateY(-5px);
+}
+
+.container .graph-container {
+  background-color: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.main, .main2 {
+  text-align: center;
+  background: rgba(0,0,0,0.03);
+  padding: 30px 50px;
+  border-top: 1px dashed white;
+}
+
+.main2 {
+  text-align: left;
+}
+
+a {
+  color: #C9512C;
+  text-decoration: none;
+}
+
+.codrops-top {
+  background: #fff;
+  text-transform: uppercase;
+  line-height: 24px;
+  font-size: 11px;
+  position: relative;
+  box-shadow: 1px 0px 2px rgba(0,0,0,0.2);
+}
+
+.codrops-top a {
+  padding: 0px 10px;
+  color: #333;
+  text-decoration: none;
+}
+
+.codrops-top a:hover {
+  background: rgba(255,255,255,0.9);
+}
+
+.ie-note {
+  display: none;
+}
+
+@media only screen and (max-width: 990px) {
+  .container, .main, .main2 {
+    padding: 15px;
+    text-align: center;
+  }
+}
+
+.navbar:hover .collapse,
+.navbar:focus-within .collapse {
+    display: block;
+}
+
+/* 側邊攔 */
+.sidebar {
+    position: sticky;
+    top: 20px; /* 當滾動到距離頂部20px時固定 */
+    background-color: #04315e; /* 調整背景顏色為較深色 */
+    padding: 20px;
+    border-radius: 5px;
+    width: 250px; /* 設定固定的寬度，讓它成為塊狀 */
+    margin: 20px auto; /* 自動調整左右外邊距，使其居中 */
+    overflow-y: auto; /* 若內容過多時允許滾動 */
+    height: auto; /* 高度自動，依內容調整 */
+}
+
+#sidebar-nav {
+    padding-top: 20px;
+    background-color: #f8f9fa;
+    position: fixed;
+    top: 0;
+    width: 100%; /* 設定寬度 */
+    max-width: 250px; /* 最大寬度與.sidebar一致 */
+    height: auto; /* 高度自動 */
+}
+
+.sidebar h5 {
+    color: #ecf0f1; /* 調整標題顏色為白色 */
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #495057; /* 底線顏色 */
+    padding-bottom: 5px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    color: #bdc3c7; /* 調整連結顏色為較亮的灰色 */
+    text-decoration: none;
+    padding-left: 10px;
+    display: block;
+    font-size: 0.9rem;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+    color: #ffffff; /* 滑鼠懸停及活動連結的顏色 */
+    background-color: #495057; /* 滑鼠懸停及活動連結的背景顏色 */
+    padding-left: 15px;
+    border-left: 3px solid #007bff; /* 左邊框顏色及大小 */
+    border-radius: 5px;
+}
+
+.sidebar ul li ul {
+    padding-left: 15px;
+}
+
+.sidebar ul li ul li {
+    margin-bottom: 5px;
+}
+
+.sidebar ul li ul li a {
+    font-size: 0.8rem;
+    color: #bdc3c7; /* 調整子連結顏色 */
+}
+

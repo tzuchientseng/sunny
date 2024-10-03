@@ -1,0 +1,116 @@
+<!DOCTYPE html><html lang="zh-tw"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Stock</title><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"><link rel="icon" href="image/favicon.ico"><link href="css/fullpage.css" rel="stylesheet"><link href="css/stock.css" rel="stylesheet"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11"></head><body><nav class="navbar navbar-expand-lg navbar-light fixed-top"><a href="../index.html" @click="scrollToTop"><img class="logo" src="../image/logo.svg" alt="Back to top!" style="width:7%;height:auto;transition:transform .3s ease;transform:scale(1.1)" onmouseover='this.style.transform="scale(1.2)"' onmouseout='this.style.transform="scale(1.1)"'></a><div class="container-fluid"><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="navbarNav"><ul class="navbar-nav mx-auto"><li class="nav-item"><a class="nav-link" href="../index.html">Introduction</a></li><li class="nav-item"><a class="nav-link" href="../magic.html">Magic Show</a></li><li class="nav-item"><a class="nav-link" href="../music.html">Music Series</a></li><li class="nav-item"><a class="nav-link" href="../math.html">Math Kits</a></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="myCodeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">My Portfolio</a><ul class="dropdown-menu" aria-labelledby="myCodeDropdown"><li><a class="dropdown-item" href="myAPI.html">My Open API</a></li><li><a class="dropdown-item" href="todo.html">To-Do List Website</a></li><li><a class="dropdown-item" href="wheel.html">Random Wheel</a></li><li><a class="dropdown-item" href="work.html">Random Work Table</a></li><li><a class="dropdown-item" href="nba.html">NBA G.O.A.T. Candidates</a></li><li><a class="dropdown-item" href="stock.html">Stocks Analysis</a></li></ul></li><li class="nav-item"><a class="nav-link" href="../about.html">About Me</a></li></ul></div></div></nav><section class="slide" id="slide1"><div class="container"><div class="row"><div class="col-md-12"><div class="upper text-center"><h2 style="color:#838359">The stocks</h2></div><div class="upper text-center"><div><div class="container"><div class="row"><div class="col-md-12" style="opacity:.8"><div class="intro-text bg-light p-4 rounded"><p>同樣是科技股究竟股票漲幅相關性是否顯著?</p><h5 class="mb-4">NVIDIA(英偉達)</h5><h5 class="mb-4">versus</h5><h5 class="mb-4">QUANTA(廣達)</h5><p>透過Python爬蟲技術載入.CSV檔，再對於兩股價平均數進行統計數據分析</p><h6 style="text-align:right;color:#a9a9a9">2024/6月份股票分析</h6></div></div></div></div><a class="arrow" href=""><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M23.245 4l-11.245 14.374-11.219-14.374-.781.619 12 15.381 12-15.391-.755-.609z"/></svg></a></div></div></div></div></div></section><section><div class="container"><div class="row"><div class="col-md-12" style="text-align:center"><div class="intro-text bg-light p-4 rounded"><div style="display:flex;justify-content:center;align-items:center;height:10vh"><iframe src="https://lottie.host/embed/d3395d13-9c43-4850-a24f-648d9d019300/KXCMw3n8k8.json"></iframe></div><h2 class="mt-2 mb-3">Step1: 爬蟲爬起來!</h2><img src="image/stock.png" alt="Python image" style="width:100%;height:auto;margin:3px"><a href="https://hk.investing.com/equities/nvidia-corp-historical-data" target="_blank" rel="noopener" class="btn btn-dark">NVIDIA</a><a href="https://stock.wearn.com/cdata.asp?Year=113&month=06&kind=2382" target="_blank" rel="noopener" class="btn btn-dark">QUANTA</a><div style="display:flex;justify-content:center;align-items:center;height:17vh"><iframe src="https://lottie.host/embed/84abc4be-1cca-4db2-980c-e796b1943206/OqXlE73zWi.json"></iframe></div><h2 class="mt-2 mb-2">Step2:對表格做爬蟲</h2><img src="image/scrape.png" alt="Java API image" style="width:100%;height:auto"><pre id="pythonCommand">
+"""
+需要修改的部分：
+<目標 url>:你要爬取的網頁的URL。
+<表格選擇器>:選擇表格元素的CSS選擇器。
+<標籤>和<類別>:表格行的標籤和類別。
+<列標籤>:表格列的標籤。
+<列數>:表格中應有的列數。
+<列名稱>:列的名稱，用於字典鍵值。
+<文件名>:保存CSV文件的名稱。
+"""
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from bs4 import BeautifulSoup
+import os
+import csv
+import time
+from webdriver_manager.chrome import ChromeDriverManager
+
+# 設定選項
+options = Options()
+options.headless = False  # 設為 True 以啟動 headless 模式
+options.add_argument('--disable-gpu')
+options.add_argument('--no-sandbox')
+options.add_argument('--disable-dev-shm-usage')
+
+# 使用 webdriver_manager 安裝並啟動 ChromeDriver
+service = Service(ChromeDriverManager().install())
+driver = webdriver.Chrome(service=service, options=options)
+
+# 請求目標 URL
+url = '<目標 url>'
+driver.get(url)
+
+# 等待頁面加載並抓取內容
+time.sleep(10)  # 增加等待時間
+
+# 等待表格元素出現
+wait = WebDriverWait(driver, 10)
+try:
+    table = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, '<表格選擇器>')))
+    print("表格已找到")
+except Exception as e:
+    print(f"表格未找到: {e}")
+    driver.quit()
+    exit()
+
+# 解析頁面
+soup = BeautifulSoup(driver.page_source, 'html.parser')
+
+# 提取數據函數
+def get_data(soup):
+    table_rows = soup.find_all('<標籤>', {'class': '<類別>'})
+    if not table_rows:
+        print("無法找到表格")
+        return []
+
+    data = []
+    for row in table_rows:
+        columns = row.find_all('<列標籤>')
+        # if len(columns) == <列數>:  # 確保有適當數量的數據列(Integer)
+        if len(columns) == 7:  # e.g
+            data.append({
+                '<列名稱1>': columns[0].get_text(strip=True),
+                '<列名稱2>': columns[1].get_text(strip=True),
+                '<列名稱3>': columns[2].get_text(strip=True),
+                # 根據實際情況添加更多列
+            })
+    return data
+
+# 提取數據並打印
+data = get_data(soup)
+for item in data:
+    print(item)
+
+# 保存數據到CSV文件
+def save_to_csv(data, filename):
+    if not data:
+        print("無數據可保存")
+        return
+    keys = data[0].keys()
+    with open(filename, 'w', newline='', encoding='utf-8-sig') as output_file:
+        dict_writer = csv.DictWriter(output_file, fieldnames=keys)
+        dict_writer.writeheader()
+        dict_writer.writerows(data)
+
+# 保存到文件
+filename = os.path.join(os.path.dirname(__file__), 'csv/<文件名>.csv')
+save_to_csv(data, filename)
+
+print(f"數據已保存到 {filename}")
+
+# 關閉瀏覽器
+driver.quit()
+
+
+                        
+																</pre><button onclick='copyCode("pythonCommand")'>爬蟲程式碼模板copy</button><div class="mt-4" style="display:flex;justify-content:center;align-items:center;height:10vh"><iframe src="https://lottie.host/embed/84abc4be-1cca-4db2-980c-e796b1943206/OqXlE73zWi.json"></iframe></div><h2 class="mt-1 mb-2">Step3: 各模組統計分析</h2><img src="image/statistics.png" alt="Java API image" style="width:100%;height:auto;margin:3px"><div style="display:flex;justify-content:center;align-items:center;height:10vh"><iframe src="https://lottie.host/embed/d3395d13-9c43-4850-a24f-648d9d019300/KXCMw3n8k8.json"></iframe></div><div class="col-md-12" style="opacity:.8"><div class="intro-text bg-light p-4 rounded"><hr><h2 class="mb-4">NVIDIA(英偉達)</h2><h2 class="mb-4">versus</h2><h2 class="mb-4">QUANTA(廣達)</h2><hr><p><strong>結論</strong><br>對於 NVIDIA 和 QUANTA 的平均股價進行了統計分析，並獲得了以下結果：</p><ul><li>NVIDIA 六月份的平均股價之 95% 信賴區間為 [101.56, 112.34]。</li><li>QUANTA 六月份的平均股價之 95% 信賴區間為 [278.80, 284.30]。</li></ul><img src="image/chart.png" alt="Java API image" style="width:100%;height:auto;margin:3px"><p>進一步檢驗了 NVIDIA 和 QUANTA 之間的平均股價是否存在顯著差異。檢驗結果如下：</p><ul><li>虛無(零)假設 (H0):μ1 = μ2</li><li>對立假設 (H1)：μ1 ≠ μ2</li><li>T 統計量：-60.2361</li><li>P 值：0.0000</li><li>在α = 0.05下拒絕虛無假設</li></ul><p>這意味著我們有足夠的證據認為 NVIDIA 和 QUANTA 的平均股價存在顯著差異。</p><p><strong>總結</strong><br>通過這次分析，我們發現 NVIDIA 和 QUANTA 的平均股價在統計上有顯著不同。股價漲動因素複雜，人性、環境、景氣...等諸多因素影響，兩公司之間並不會顯著關聯。</p></div></div></div></div><iframe src="https://lottie.host/embed/e1ad340e-3f5e-43ee-9956-6c546a8b8af5/HTnRYwUAIx.json"></iframe></div></div></section><script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script><script src="js/custom.js"></script><script>function copyCode(elementId) {
+                const codeBlock = document.getElementById(elementId);
+                const range = document.createRange();
+                window.getSelection().removeAllRanges(); // 清除當前選擇
+                range.selectNode(codeBlock);
+                window.getSelection().addRange(range); // 選擇文本
+                document.execCommand('copy');
+                window.getSelection().removeAllRanges(); // 移除選擇
+                Swal.fire({ // 使用 SweetAlert 彈出提醒
+                    title: 'COPY!',
+                    text: 'The command has been copied to the clipboard.',
+                    icon: 'success',
+                    confirmButtonText: 'Close'
+                });
+            }</script></body></html>
