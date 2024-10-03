@@ -24,7 +24,7 @@ const app = Vue.createApp({
                 preConfirm: (code) => {
                     return new Promise((resolve, reject) => {
                         setTimeout(() => {
-                            if (code === 'pass') { 
+                            if (code === 'open') { 
                                 resolve();
                             } else {
                                 Swal.fire({
