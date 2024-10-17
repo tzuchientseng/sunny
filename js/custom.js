@@ -1,1 +1,75 @@
-new fullpage("#fullpage",{autoScrolling:!0,scrollHorizontally:!0,onLeave:function(o,a,t){new TimelineMax().fromTo(".upper",.6,{autoAlpha:0},{autoAlpha:1},"+=0.5").fromTo(".lower",.6,{autoAlpha:0},{autoAlpha:1},"-=0.6")}}),document.addEventListener("DOMContentLoaded",function(){var o=document.getElementsByClassName("arrow");for(i=0;i<o.length;i++)o[i].addEventListener("click",function(o){o.preventDefault(),fullpage_api.moveSectionDown()});new TimelineMax().fromTo(".upper h2",.6,{autoAlpha:0,y:20},{autoAlpha:1,y:0}).fromTo(".upper p",.6,{autoAlpha:0},{autoAlpha:1}).fromTo(".btn1",.6,{autoAlpha:0,x:-20},{autoAlpha:1,x:0},"-=0.6").fromTo(".btn2",.6,{autoAlpha:0,x:20},{autoAlpha:1,x:0},"-=0.6").fromTo(".arrow",.6,{autoAlpha:0},{autoAlpha:1})});
+new fullpage('#fullpage', {
+	//options here
+	autoScrolling:true,
+    scrollHorizontally: true,
+    onLeave: function(origin, destination, direction){
+        var loading2 = new TimelineMax();
+        loading2.fromTo(".upper",0.6,{ 
+            autoAlpha: 0,
+         
+        },{ 
+            autoAlpha: 1,
+         
+        },"+=0.5")
+        .fromTo(".lower",0.6,{ 
+            autoAlpha: 0,
+         
+        },{ 
+            autoAlpha: 1,
+         
+        },"-=0.6")
+        ;
+    },
+});
+
+document.addEventListener("DOMContentLoaded",function(){
+    
+    //click function
+    var arrows = document.getElementsByClassName('arrow');
+    for (i=0;i<arrows.length;i++){
+        arrows[i].addEventListener('click',function(e){
+            e.preventDefault();
+            fullpage_api.moveSectionDown();
+        });
+    }
+
+
+    var loading = new TimelineMax();
+    loading.fromTo(".upper h2",0.6,{ 
+        autoAlpha: 0,
+        y: 20
+    },{ 
+        autoAlpha: 1,
+        y: 0
+    })
+    .fromTo(".upper p",0.6,{ 
+        autoAlpha: 0,
+      
+    },{ 
+        autoAlpha: 1,
+      
+    })
+    .fromTo(".btn1",0.6,{ 
+        autoAlpha: 0,
+        x: -20
+    },{ 
+        autoAlpha: 1,
+        x: 0
+    },"-=0.6")
+    .fromTo(".btn2",0.6,{ 
+        autoAlpha: 0,
+        x: 20
+    },{ 
+        autoAlpha: 1,
+        x: 0
+    },"-=0.6") 
+    .fromTo(".arrow",0.6,{ 
+        autoAlpha: 0,
+      
+    },{ 
+        autoAlpha: 1,
+      
+    })    
+    ;
+
+});
