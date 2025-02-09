@@ -5,19 +5,19 @@ $(document).ready(function(){
 				,p3=$('input[id="f-product3"]:checked').val()
 				
 			if (p1){
-				$('span.sk1').html("Java");
-				$('span.sk2').html("Python");
+				$('span.sk1').html("Python");
+				$('span.sk2').html("Java");
 				$('span.sk3').html("C++");
-				$('span.sk4').html("JS");
-				$('span.sk5').html("PHP");
-				$('span.sk6').html("DataBase (mySQL)");}
+				$('span.sk4').html("PHP");
+				$('span.sk5').html("NoodeJS");
+				$('span.sk6').html("DataBase");}
 			//else
 				//$('#car').removeClass('selected')
 
 			if (p2){
-				$('span.sk1').html("JavaScript(jQuery, Ajax,DHTMLX)");
+				$('span.sk1').html("JavaScript(jQuery, Ajax)");
 				$('span.sk2').html("HTML");
-				$('span.sk3').html("CSS, twitter bootstrap");
+				$('span.sk3').html("CSS, bootstrap");
 				$('span.sk4').html("PhotoShop");
 				$('span.sk5').html("Illustrator");
 				$('span.sk6').html("?");}
@@ -36,3 +36,4 @@ $(document).ready(function(){
 		}).eq(0).trigger('change');
 	});
 	
+

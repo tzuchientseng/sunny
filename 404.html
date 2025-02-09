@@ -5,13 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Redirect</title>
     <script>
-        // JavaScript redirection code
-        if (window.location.pathname.startsWith('/api')) {
-            // Get the original requested path and replace /api with an empty string
-            const apiPath = window.location.pathname.replace('/api', '');
-            // Redirect to Heroku's API
-            window.location.href = 'https://my-api-project-83a1e4f4e00f.herokuapp.com' + apiPath;
-        }
+        // Redirect to the desired URL
+        window.location.href = 'https://blog.sunnytseng.com';
     </script>
 </head>
 <body></body>
